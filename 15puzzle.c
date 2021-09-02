@@ -142,7 +142,7 @@ void showscore()
 {
   puts(" Name                    Times    Turns");
   puts("----------------------------------------");
-  system("sort -n +2 -t: " SCOREFILE " | head -10 | nawk '{split($0, a, \":\") ; printf(\" %-20s %8d %8d\\n\", a[1], a[2], a[3])}'");
+  system("sort -n +2 -t: " SCOREFILE " | head -10 | awk '{split($0, a, \":\") ; printf(\" %-20s %8d %8d\\n\", a[1], a[2], a[3])}'");
   puts("----------------------------------------");
 }
 
