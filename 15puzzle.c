@@ -29,8 +29,6 @@ unsigned int turn = 0;
 double drand48();
 int tile_x = 0, tile_y = 0, height = 0, width = 0;
 
-const char revision[] = "$Revision: 1.2 $";
-
 void usage()
 {
   puts("15puzzle [OPTION]...\n");
@@ -41,7 +39,6 @@ void usage()
   puts("  -Y n   game height (not supported yet)");
   puts("  -s     display score and exit");
   puts("  -h     display this help and exit");
-  puts("  -v     output version information and exit");
 }
 
 void wininit()
@@ -194,7 +191,7 @@ int main(int argc, char **argv)
   extern int optind;
 
   /* arguments */
-  while ((c = getopt(argc, argv, "rx:y:X:Y:hvs")) != -1) {
+  while ((c = getopt(argc, argv, "rx:y:X:Y:hs")) != -1) {
     switch (c) {
     case 'r':
       rev = (UP | DOWN | LEFT | RIGHT);
@@ -213,10 +210,6 @@ int main(int argc, char **argv)
       break;
     case 'h':
       usage();
-      exit(1);
-      break;
-    case 'v':
-      fprintf(stderr, "15puzzle: %s\n", revision);
       exit(1);
       break;
     case 's':
