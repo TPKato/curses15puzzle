@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <unistd.h>
+#include <time.h>
 #include <curses.h>
 #include <sys/types.h>
 #include <sys/time.h>
