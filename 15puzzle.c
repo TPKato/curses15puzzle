@@ -174,6 +174,7 @@ void score(long time)
 
   if((fp = fopen(SCOREFILE, "a")) == NULL) {
     perror(SCOREFILE);
+    endwin();
     exit(1);
   }
   fprintf(fp, "%s:%ld:%d\n", name, time, turn);
