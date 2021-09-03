@@ -1,16 +1,12 @@
 # Makefile for 15puzzle
 
 CC = gcc
-CFLAGS = -g -O2
-LDLIBS = -lcurses -ltermcap
+CFLAGS = -g -O2 -Wall
+# LDLIBS = -lcurses -ltermcap
+LDLIBS = -lcurses
 
-
-15puzzle : 15puzzle.o 15puzzle.score
+15puzzle: 15puzzle.o
 	$(CC) $(LDFLAGS) $< $(LDLIBS) -o $@
 
-15puzzle.score :
-	touch $@
-	chmod 666 $@
-
-clean :
-	$(RM) *.o *.obj *~ *.bak
+clean:
+	$(RM) *.o *.obj *~
