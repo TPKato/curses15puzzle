@@ -246,5 +246,7 @@ int main(int argc, char **argv)
 
   score((long)(end - start));
 
+  printf("Time: %ld s, Turns:  %d\n", (long)(end - start), turn);
+
   return 0;
 }
