@@ -1,3 +1,8 @@
+/*
+ * curses based 15 puzzle
+ * Copyright (c) 1997 Takashi P. KATO(H)
+ */
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
